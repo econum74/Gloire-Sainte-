@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gloire Sainte</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f2f7;
+      color: #222;
+    }
+
+    header {
+      background: #6b3b86;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    .logo {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .welcome {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #6b3b86;
+    }
+
+    button {
+      background: #6b3b86;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+    }
+
+    #message {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background: #eee4f4;
+      border-radius: 10px;
+      color: #4b2165;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✝️</div>
+  <h1>Gloire Sainte</h1>
+  <p>Grandir dans la foi et devenir disciple de Jésus-Christ</p>
+</header>
+
+<div class="container">
+
+  <div class="welcome">
+    <h2>Bienvenue ! 🙏</h2>
+    <p>Commencez votre journée avec Dieu.</p>
+  </div>
+
+  <div class="card">
+    <h2>📖 Lecture biblique</h2>
+    <p>Découvrez et méditez la Parole de Dieu chaque jour.</p>
+    <button onclick="showMessage('La section Lecture biblique sera bientôt disponible.')">
+      Lire la Bible
+    </button>
+  </div>
+
+  <div class="card">
+    <h2>🙏 Prière</h2>
+    <p>Prenez un moment pour parler avec Dieu.</p>
+    <button onclick="showMessage('Seigneur, guide-moi aujourd’hui et fortifie ma foi. Amen.')">
+      Commencer à prier
+    </button>
+  </div>
+
+  <div class="card">
+    <h2>🎓 Mon parcours spirituel</h2>
+    <p>Grandissez progressivement dans votre relation avec Jésus-Christ.</p>
+    <button onclick="showMessage('Bienvenue dans votre parcours de discipulat avec Jésus-Christ.')">
+      Commencer
+    </button>
+  </div>
+
+  <div id="message"></div>
+
+</div>
+
+<footer>
+  © 2026 Gloire Sainte — Pour la gloire de Jésus-Christ ✝️
+</footer>
+
+<script>
+  function showMessage(text) {
+    const message = document.getElementById("message");
+    message.textContent = text;
+    message.style.display = "block";
+  }
+</script>
+
+</body>
+</html>
