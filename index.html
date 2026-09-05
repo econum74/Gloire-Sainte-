@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Gloire Sainte</title>
@@ -19,136 +20,301 @@
     }
 
     header {
-      background: #6b3b86;
+      background: #5b2c6f;
       color: white;
       text-align: center;
-      padding: 35px 20px;
-    }
-
-    .logo {
-      font-size: 55px;
-      margin-bottom: 10px;
+      padding: 25px 15px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 30px;
     }
 
     header p {
-      margin-top: 12px;
-      font-size: 16px;
+      margin: 8px 0 0;
+      font-size: 15px;
+      opacity: 0.9;
     }
 
     .container {
       max-width: 700px;
       margin: auto;
-      padding: 20px;
+      padding: 20px 15px 40px;
     }
 
     .welcome {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
       text-align: center;
-      margin: 25px 0;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .welcome h2 {
+      margin-top: 0;
+      color: #5b2c6f;
+    }
+
+    .verse {
+      background: #fff7e6;
+      border-left: 5px solid #e6a700;
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .verse strong {
+      display: block;
+      margin-top: 10px;
+      color: #5b2c6f;
+    }
+
+    .button {
+      display: inline-block;
+      background: #5b2c6f;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 22px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background: #432153;
+    }
+
+    .section-title {
+      margin: 30px 0 15px;
+      color: #5b2c6f;
+      text-align: center;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
     }
 
     .card {
       background: white;
-      padding: 22px;
-      margin-bottom: 18px;
+      padding: 20px 15px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card .icon {
+      font-size: 35px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #5b2c6f;
+    }
+
+    .card p {
+      font-size: 13px;
+      margin: 0;
+      color: #666;
+    }
+
+    .progress-box {
+      background: white;
+      margin-top: 25px;
+      padding: 20px;
       border-radius: 15px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
 
-    .card h2 {
-      margin-top: 0;
-      color: #6b3b86;
+    .progress {
+      width: 100%;
+      height: 20px;
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 10px;
     }
 
-    button {
-      background: #6b3b86;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: #5b2c6f;
+      transition: width 0.5s;
     }
 
-    button:hover {
-      opacity: 0.9;
+    .message {
+      display: none;
+      margin-top: 20px;
+      background: #eaf7ea;
+      padding: 15px;
+      border-radius: 10px;
+      color: #236b23;
+      text-align: center;
     }
 
     footer {
       text-align: center;
       padding: 25px;
       color: #666;
+      font-size: 13px;
     }
 
-    #message {
-      display: none;
-      margin-top: 15px;
-      padding: 15px;
-      background: #eee4f4;
-      border-radius: 10px;
-      color: #4b2165;
+    @media (max-width: 500px) {
+      .menu {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">✝️</div>
-  <h1>Gloire Sainte</h1>
-  <p>Grandir dans la foi et devenir disciple de Jésus-Christ</p>
-</header>
+  <header>
+    <h1>✝️ Gloire Sainte</h1>
+    <p>Grandir avec Dieu et devenir disciple de Jésus-Christ</p>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <div class="welcome">
-    <h2>Bienvenue ! 🙏</h2>
-    <p>Commencez votre journée avec Dieu.</p>
+    <div class="welcome">
+      <h2>Bienvenue 🙏</h2>
+
+      <p>
+        Commence ta journée avec Dieu et avance chaque jour
+        dans ton parcours spirituel.
+      </p>
+
+      <button class="button" onclick="startDay()">
+        🌅 Commencer ma journée avec Dieu
+      </button>
+
+      <div id="message" class="message">
+        🙏 Que cette journée soit bénie !
+        Que Dieu te donne la force de marcher avec Lui.
+      </div>
+    </div>
+
+    <div class="verse">
+      📖 <strong>Verset du jour</strong>
+
+      « Confie-toi en l'Éternel de tout ton cœur,
+      et ne t'appuie pas sur ta sagesse. »
+
+      <strong>Proverbes 3:5</strong>
+    </div>
+
+    <h2 class="section-title">
+      Mon parcours spirituel
+    </h2>
+
+    <div class="menu">
+
+      <div class="card" onclick="completeActivity('lecture')">
+        <div class="icon">📖</div>
+        <h3>Lire la Bible</h3>
+        <p>Découvre chaque jour la Parole de Dieu.</p>
+      </div>
+
+      <div class="card" onclick="completeActivity('etude')">
+        <div class="icon">📚</div>
+        <h3>Étude biblique</h3>
+        <p>Comprends et approfondis les Écritures.</p>
+      </div>
+
+      <div class="card" onclick="completeActivity('priere')">
+        <div class="icon">🙏</div>
+        <h3>Prière</h3>
+        <p>Prends un moment pour parler avec Dieu.</p>
+      </div>
+
+      <div class="card" onclick="completeActivity('meditation')">
+        <div class="icon">🕊️</div>
+        <h3>Méditation</h3>
+        <p>Médite et applique la Parole dans ta vie.</p>
+      </div>
+
+    </div>
+
+    <div class="progress-box">
+      <h3>📈 Ma progression du jour</h3>
+
+      <p id="progressText">
+        0 activité sur 4 accomplie
+      </p>
+
+      <div class="progress">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="card">
-    <h2>📖 Lecture biblique</h2>
-    <p>Découvrez et méditez la Parole de Dieu chaque jour.</p>
-    <button onclick="showMessage('La section Lecture biblique sera bientôt disponible.')">
-      Lire la Bible
-    </button>
-  </div>
+  <footer>
+    ✝️ Gloire Sainte © 2026<br>
+    Une application pour grandir avec Jésus-Christ.
+  </footer>
 
-  <div class="card">
-    <h2>🙏 Prière</h2>
-    <p>Prenez un moment pour parler avec Dieu.</p>
-    <button onclick="showMessage('Seigneur, guide-moi aujourd’hui et fortifie ma foi. Amen.')">
-      Commencer à prier
-    </button>
-  </div>
+  <script>
 
-  <div class="card">
-    <h2>🎓 Mon parcours spirituel</h2>
-    <p>Grandissez progressivement dans votre relation avec Jésus-Christ.</p>
-    <button onclick="showMessage('Bienvenue dans votre parcours de discipulat avec Jésus-Christ.')">
-      Commencer
-    </button>
-  </div>
+    let completedActivities = [];
 
-  <div id="message"></div>
+    function startDay() {
 
-</div>
+      document.getElementById("message").style.display = "block";
 
-<footer>
-  © 2026 Gloire Sainte — Pour la gloire de Jésus-Christ ✝️
-</footer>
+      if (!completedActivities.includes("journee")) {
+        completedActivities.push("journee");
+      }
+    }
 
-<script>
-  function showMessage(text) {
-    const message = document.getElementById("message");
-    message.textContent = text;
-    message.style.display = "block";
-  }
-</script>
+    function completeActivity(activity) {
+
+      if (!completedActivities.includes(activity)) {
+
+        completedActivities.push(activity);
+
+        updateProgress();
+
+        alert("🙏 Activité accomplie ! Continue à grandir avec Dieu.");
+
+      } else {
+
+        alert("Cette activité est déjà accomplie aujourd'hui.");
+
+      }
+    }
+
+    function updateProgress() {
+
+      let total = completedActivities.filter(
+        activity => activity !== "journee"
+      ).length;
+
+      let percentage = (total / 4) * 100;
+
+      document.getElementById("progressBar").style.width =
+        percentage + "%";
+
+      document.getElementById("progressText").innerText =
+        total + " activité(s) sur 4 accomplie(s)";
+    }
+
+  </script>
 
 </body>
 </html>
